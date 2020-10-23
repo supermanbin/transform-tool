@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/transform-tool/static/css/main.32475eb3.chunk.css",
+    "main.js": "/transform-tool/static/js/main.3387f172.chunk.js",
+    "main.js.map": "/transform-tool/static/js/main.3387f172.chunk.js.map",
+    "runtime-main.js": "/transform-tool/static/js/runtime-main.9025e899.js",
+    "runtime-main.js.map": "/transform-tool/static/js/runtime-main.9025e899.js.map",
+    "static/js/2.1621a67c.chunk.js": "/transform-tool/static/js/2.1621a67c.chunk.js",
+    "static/js/2.1621a67c.chunk.js.map": "/transform-tool/static/js/2.1621a67c.chunk.js.map",
+    "index.html": "/transform-tool/index.html",
+    "precache-manifest.da0326f106ee36633e7044daf2971349.js": "/transform-tool/precache-manifest.da0326f106ee36633e7044daf2971349.js",
+    "service-worker.js": "/transform-tool/service-worker.js",
+    "static/css/main.32475eb3.chunk.css.map": "/transform-tool/static/css/main.32475eb3.chunk.css.map",
+    "static/js/2.1621a67c.chunk.js.LICENSE.txt": "/transform-tool/static/js/2.1621a67c.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/transform-tool/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9025e899.js",
+    "static/js/2.1621a67c.chunk.js",
+    "static/css/main.32475eb3.chunk.css",
+    "static/js/main.3387f172.chunk.js"
+  ]
+}
