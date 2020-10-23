@@ -1,15 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+import TransfromPage from './Pages/TransfromPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-
-    </div>
+    <TransfromPage></TransfromPage>
   );
 }
 
