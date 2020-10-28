@@ -12,6 +12,7 @@
 }
 .actions {
   width: 60%;
+  padding-right: 80px;
 }
 .actions input {
   border: 1px solid rgb(34, 80, 230);
@@ -35,6 +36,7 @@
 }
 .actions input[type='color' i]::-webkit-color-swatch {
   border-radius: 3px;
+  border: 0;
 }
 .actions input:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3);
@@ -46,7 +48,8 @@
   margin: 0;
 }
 .property {
-  padding: 10px;
+  position: relative;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   transition: background cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
@@ -67,4 +70,52 @@
 }
 .box {
   transition: all ease 0.3s;
+}
+.add {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: 50%;
+  right: -34px;
+  transform: translateY(-50%) rotate(45deg);
+  background: #eee;
+  border: 0;
+  border-radius: 34px 34px 34px 0;
+  outline: 0;
+}
+.add span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  transform: rotate(45deg);
+}
+.add span::before {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  background: #000;
+}
+.add span::after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  content: '';
+  background: #000;
+}
+.code pre {
+  word-break: break-all;
+  white-space: pre-wrap;
 }

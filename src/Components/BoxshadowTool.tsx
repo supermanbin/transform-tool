@@ -1,59 +1,74 @@
-import React, {useState} from 'react';
+import React, { ReactElement } from 'react';
+import {useSpring, animated} from 'react-scripts';
 
-const BoxshadowTool = (properties: any) => {
-  // const [properties, setProperty] = useState({...properties});
-  // const 
-  console.log(properties);
-  const {offsetX} = properties;
+const BoxshadowTool = (properties: any):ReactElement => {
+  const {
+    index,
+    offsetX,
+    offsetY,
+    blur,
+    spread,
+    color,
+    valueChange,
+    addShadow
+  } = properties;
+  const props = useSpring({opacity: 1, from: {opacity: 0}})
   return (
-    <div className="property">
+    <animated.div className="property" onMouseEnter={()=> {
+    }}>
       <label htmlFor="offsetX">
         <p>offset-x:</p>
-        <input value={properties.offsetX}
+        <input value={offsetX}
           type="number" 
           name="" 
           id="offsetX"
           onChange={(e) => {
+            valueChange({offsetX: e.target.value}, index);
           }}
           />
       </label>
       <label htmlFor="offsetY">
         <p>offset-y:</p>
-        <input value={properties.offsetY}
+        <input value={offsetY}
           type="number" 
           name="" 
           id="offsetY"
           onChange={(e) => {
+            valueChange({offsetY: e.target.value}, index);
           }}
           /></label>
       <label htmlFor="blur">
         <p>blur-radius:</p>
-        <input value={properties.blur}
+        <input value={blur}
           type="number" 
           name="" 
           id="blur"
           onChange={(e) => {
+            valueChange({blur: (parseInt(e.target.value) < 0) ? 0 : e.target.value}, index);
           }}
           /></label>
       <label htmlFor="spreadRadius">
         <p>spread-radius:</p>
-        <input value={properties.spread}
+        <input value={spread}
           type="number" 
           name="" 
           id="spreadRadius"
           onChange={(e) => {
+            valueChange({spread: e.target.value}, index);
           }}
           /></label>
       <label htmlFor="color">
         <p>color:</p>
-        <input value={properties.color}
+        <input value={color}
           type="color" 
           name="" 
           id="color"
           onChange={(e) => {
+            valueChange({color: e.target.value}, index);
           }}
           /></label>
-    </div>
+          <button className="add" onClick={addShadow}><span></span></button>
+    </animated.div>
   )
 }
 
